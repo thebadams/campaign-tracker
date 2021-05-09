@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
+// const { Campaign } = require('./Campaign');
 const sequelize = require('../config/connection');
 
-class Campaign extends Model {}
+class CampaignSession extends Model {}
 
-Campaign.init(
+CampaignSession.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,14 +13,21 @@ Campaign.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    user_id: {
+    date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      validate: {
+        isDate: true,
+      },
+    },
+    campaign_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user',
+        model: 'campaign',
         key: 'id',
       },
     },
@@ -28,8 +36,8 @@ Campaign.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    modelName: 'campaign',
+    modelName: 'campaignsession',
   },
 );
 
-module.exports = Campaign;
+module.exports = CampaignSession;
