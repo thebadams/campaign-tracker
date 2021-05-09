@@ -1,0 +1,41 @@
+{
+  "name": "campaign-tracker",
+  "version": "1.0.0",
+  "description": "A web application to enable a user to easily keep track of a TTRPG game as it happens",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebadams/campaign-tracker.git"
+  },
+  "keywords": [
+    "Dungeons",
+    "and",
+    "Dragons",
+    "TTRPG"
+  ],
+  "author": "Brian P. Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebadams/campaign-tracker/issues"
+  },
+  "homepage": "https://github.com/thebadams/campaign-tracker#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
